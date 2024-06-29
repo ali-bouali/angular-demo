@@ -1,0 +1,25 @@
+div {
+  &.btn {
+    width: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    &:hover {
+      transition: transform 0.3s;
+      background-color: #0084ff;
+    }
+    &.primary {
+      background-color: #00b7ff;
+      border: solid 1px #198ffd;
+
+    }
+    &.danger {
+      background-color: #ff0055;
+      border: solid 1px #fc0f54;
+
+    }
+  }
+}

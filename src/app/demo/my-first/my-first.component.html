@@ -1,0 +1,9 @@
+<div
+  *ngIf="title"
+  class="btn"
+  [class.primary]="severity === 'primary'"
+  [class.danger]="severity === 'danger'"
+  (click)="clickMe()"
+>
+  {{ title }}
+</div>
