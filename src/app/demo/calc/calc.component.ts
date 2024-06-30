@@ -8,9 +8,7 @@ import {Operation} from './operation';
 })
 export class CalcComponent {
   result: number = 0;
-  operand1: number = 0;
-  operand2: number = 0;
-  operator: string = '+';
+  operation: Operation = {};
 
 
 
@@ -18,20 +16,27 @@ export class CalcComponent {
     // = --> Affectation
     // == --> test 3al valeur
     // === --> test 3al valeur w type
-    switch (this.operator) {
-      case '+':
-        this.result = this.operand1 + this.operand2;
-        break;
-      case '-':
-        this.result = this.operand1 - this.operand2;
-        break;
-      case '*':
-        this.result = this.operand1 * this.operand2;
-        break;
-      case '/':
-        this.result = this.operand1 / this.operand2;
-        break;
-      default: this.result = 0;
+
+    // if (string){...} --> if string mte3 mehich null w mahich undefined
+    // --> ma nest7a9ech n7ott l field === undefined || field === null
+    // --> '2' is not undefined
+    if (this.operation.operand1 && this.operation.operand2) {
+      switch (this.operation.operator) {
+        case '+':
+          this.result = this.operation.operand1 + this.operation.operand2;
+          break;
+        case '-':
+          this.result = this.operation.operand1 - this.operation.operand2;
+          break;
+        case '*':
+          this.result = this.operation.operand1 * this.operation.operand2;
+          break;
+        case '/':
+          this.result = this.operation.operand1 / this.operation.operand2;
+          break;
+        default: this.result = 0;
+      }
+
     }
   }
 
