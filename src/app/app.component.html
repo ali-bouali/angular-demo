@@ -1,22 +1,5 @@
-<div style="border: solid 1px gray;padding: 20px">
+<app-menu></app-menu>
 
-  <app-my-first-component
-    [title]="'Save'"
-    (btnClicked)="handleChildEvent($event)"
-  ></app-my-first-component>
-<br>
-  <app-my-first-component
-    [title]="'Delete'"
-    [severity]="'danger'"
-  ></app-my-first-component>
-
-
-  <p>Number of clicks: {{ numberOfClicks }} (From Child to Parent)</p>
-
-
-  <hr>
-
-  <app-calc></app-calc>
+<div style="padding: 30px; border: solid 1px red; margin: 15px; background-color: black; color: white">
   <router-outlet></router-outlet>
-
 </div>
