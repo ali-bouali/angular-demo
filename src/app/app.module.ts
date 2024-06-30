@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyFirstComponent } from './demo/my-first/my-first.component';
 import { CalcComponent } from './demo/calc/calc.component';
 import {FormsModule} from '@angular/forms';
+import {CalculatorService} from './demo/services/calculator/calculator.service';
 
 @NgModule({
   declarations: [ // ndeclari les composants mte3i hna
@@ -17,7 +18,9 @@ import {FormsModule} from '@angular/forms';
     FormsModule
   ],
   // lazemni n7ott les services elli mahomech privded in root
-  providers: [],
+  providers: [
+    CalculatorService
+  ],
   // l composant el kbir elli bech ndemarri bih l application
   bootstrap: [AppComponent]
 })

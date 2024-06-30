@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {Operation} from './operation';
+import {CalculatorService} from '../services/calculator/calculator.service';
 
 @Component({
   selector: 'app-calc',
@@ -11,33 +12,18 @@ export class CalcComponent {
   operation: Operation = {};
 
 
+  constructor(
+    // pour injecter une dep: --> {visibilite (provate / public)} {nom_variable} : {TypeDuService == esem l classe elli t7ebb tinjecteha}
+    private service: CalculatorService
+  ) {}
+
 
   calculate() {
-    // = --> Affectation
-    // == --> test 3al valeur
-    // === --> test 3al valeur w type
+    // const --> 7aja constante w na3ref enni ma 3adech bech tetbaddel
+    // let --> na3ref ennou l variable mte3i bech n3awed na3mellha affectation
+    // var --> nafs chay kima let amma TS yrecommendi ennek testa3mel dima le mot cle let
+    this.result = this.service.calculate(this.operation);
 
-    // if (string){...} --> if string mte3 mehich null w mahich undefined
-    // --> ma nest7a9ech n7ott l field === undefined || field === null
-    // --> '2' is not undefined
-    if (this.operation.operand1 && this.operation.operand2) {
-      switch (this.operation.operator) {
-        case '+':
-          this.result = this.operation.operand1 + this.operation.operand2;
-          break;
-        case '-':
-          this.result = this.operation.operand1 - this.operation.operand2;
-          break;
-        case '*':
-          this.result = this.operation.operand1 * this.operation.operand2;
-          break;
-        case '/':
-          this.result = this.operation.operand1 / this.operation.operand2;
-          break;
-        default: this.result = 0;
-      }
-
-    }
   }
 
 
