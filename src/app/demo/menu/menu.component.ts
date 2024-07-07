@@ -22,6 +22,8 @@ export class MenuComponent {
    */
   navigateToNewLink() {
     // koll url segement bech yzidha '/' --> new-link/clicked
-    this.router.navigate(['new-link', 'clicked']);
+    // l Query params yet3addou fel URL --> http://localhost:4200/url-mte3i?param1=value1&param2=value2&param3=value3&param_n=value_n
+    // ma 3andich limite fel nombre de parametres elli najem n3addigon ==> la seule limite heyya toul l URL mte3i
+    this.router.navigate(['my-form'], {queryParams: {email: 'test@mail.com', username: 'ali'}});
   }
 }

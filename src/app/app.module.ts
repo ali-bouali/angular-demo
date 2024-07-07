@@ -11,10 +11,11 @@ import { LoginComponent } from './demo/login/login.component';
 import { RegisterComponent } from './demo/register/register.component';
 import { DashboardComponent } from './demo/dashboard/dashboard.component';
 import { MenuComponent } from './demo/menu/menu.component';
+import { MyFormComponent } from './demo/my-form/my-form.component';
 
 @NgModule({
   declarations: [ // ndeclari les composants mte3i hna
-    AppComponent, MyFirstComponent, CalcComponent, LoginComponent, RegisterComponent, DashboardComponent, MenuComponent
+    AppComponent, MyFirstComponent, CalcComponent, LoginComponent, RegisterComponent, DashboardComponent, MenuComponent, MyFormComponent
   ],
   imports: [ // na3mel import l ayy module nest7a99ou
     BrowserModule,
