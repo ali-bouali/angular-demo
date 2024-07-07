@@ -28,6 +28,6 @@ export class MenuComponent {
     // this.router.navigate(['my-form'], {queryParams: {email: 'test@mail.com', username: 'ali'}});
 
     // bech ykoun ==> http://localhost:4200/url_mte3i/VARIABLE/b9yet-url
-    this.router.navigate(['my-form', this.id, 'edit']);
+    this.router.navigate(['main', 'my-form', this.id, 'edit']);
   }
 }

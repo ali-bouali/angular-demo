@@ -1,0 +1,19 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link " aria-current="page" routerLink="sub-1"
+       [class.active]="isTabActive('sub-1')"
+    >Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="sub-2"
+       [class.active]="isTabActive('sub-2')"
+    >Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="sub-3">Link</a>
+  </li>
+</ul>
+
+<div>
+  <router-outlet></router-outlet>
+</div>

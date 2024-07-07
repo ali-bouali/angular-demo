@@ -12,10 +12,14 @@ import { RegisterComponent } from './demo/register/register.component';
 import { DashboardComponent } from './demo/dashboard/dashboard.component';
 import { MenuComponent } from './demo/menu/menu.component';
 import { MyFormComponent } from './demo/my-form/my-form.component';
+import { MainComponent } from './demo/main/main.component';
+import { SubMenuComponent } from './demo/sub-menu/sub-menu.component';
+import { SubComp1Component } from './demo/sub-menu/sub-comp1/sub-comp1.component';
+import { SubComp2Component } from './demo/sub-menu/sub-comp2/sub-comp2.component';
 
 @NgModule({
   declarations: [ // ndeclari les composants mte3i hna
-    AppComponent, MyFirstComponent, CalcComponent, LoginComponent, RegisterComponent, DashboardComponent, MenuComponent, MyFormComponent
+    AppComponent, MyFirstComponent, CalcComponent, LoginComponent, RegisterComponent, DashboardComponent, MenuComponent, MyFormComponent, MainComponent, SubMenuComponent, SubComp1Component, SubComp2Component
   ],
   imports: [ // na3mel import l ayy module nest7a99ou
     BrowserModule,
