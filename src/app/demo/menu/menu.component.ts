@@ -9,6 +9,7 @@ import {Router} from '@angular/router';
 })
 export class MenuComponent {
 
+  id = 1234234234;
   constructor(
     private router: Router
   ) {}
@@ -24,6 +25,9 @@ export class MenuComponent {
     // koll url segement bech yzidha '/' --> new-link/clicked
     // l Query params yet3addou fel URL --> http://localhost:4200/url-mte3i?param1=value1&param2=value2&param3=value3&param_n=value_n
     // ma 3andich limite fel nombre de parametres elli najem n3addigon ==> la seule limite heyya toul l URL mte3i
-    this.router.navigate(['my-form'], {queryParams: {email: 'test@mail.com', username: 'ali'}});
+    // this.router.navigate(['my-form'], {queryParams: {email: 'test@mail.com', username: 'ali'}});
+
+    // bech ykoun ==> http://localhost:4200/url_mte3i/VARIABLE/b9yet-url
+    this.router.navigate(['my-form', this.id, 'edit']);
   }
 }

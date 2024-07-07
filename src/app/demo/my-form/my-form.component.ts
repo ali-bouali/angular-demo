@@ -6,10 +6,11 @@ import {ActivatedRoute} from '@angular/router';
   templateUrl: './my-form.component.html',
   styleUrls: ['./my-form.component.scss']
 })
-export class MyFormComponent implements OnInit, OnDestroy, AfterViewInit, AfterContentInit {
+export class MyFormComponent implements OnInit { //, OnDestroy, AfterViewInit, AfterContentInit {
 
   email = 'empty@mail.com';
   username = 'no-user-name';
+  userId = 0;
 
   constructor(
     private activatedRoute: ActivatedRoute
@@ -17,18 +18,22 @@ export class MyFormComponent implements OnInit, OnDestroy, AfterViewInit, AfterC
   }
 
   ngAfterContentInit(): void {
-    alert('view has been initialized');
+    // alert('view has been initialized');
   }
 
   ngAfterViewInit(): void {
-    alert('Content has been initialized');
+    // alert('Content has been initialized');
   }
 
   ngOnDestroy(): void {
-    alert('cmp has been destroyed');
+    // alert('cmp has been destroyed');
   }
 
   ngOnInit(): void {
-    alert('cmp has been initialized');
+    console.log(this.activatedRoute);
+    this.email = this.activatedRoute.snapshot.queryParams['email'];
+    this.username = this.activatedRoute.snapshot.queryParams['username'];
+
+    this.userId = this.activatedRoute.snapshot.params['id'];
   }
 }
