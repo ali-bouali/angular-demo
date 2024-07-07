@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'calc',
     component: CalcComponent
+  },
+  {
+    path: 'new-link/clicked',
+    component: LoginComponent
   }
 ];
 
