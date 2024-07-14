@@ -8,6 +8,8 @@ import {FormsModule} from '@angular/forms';
 import { AllProductsComponent } from './pages/all-products/all-products.component';
 import { AllCategoriesComponent } from './pages/all-categories/all-categories.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { ManageProductComponent } from './pages/manage-product/manage-product.component';
 
 
 
@@ -17,7 +19,9 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     MenuComponent,
     AllProductsComponent,
     AllCategoriesComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    LoaderComponent,
+    ManageProductComponent
   ],
   imports: [
     CommonModule,

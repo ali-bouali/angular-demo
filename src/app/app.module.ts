@@ -33,9 +33,10 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
         CalculatorService,
         HttpClient
     ],
-    exports: [
-        MenuComponent
-    ],
+  exports: [
+    MenuComponent,
+    LoginComponent
+  ],
     // l composant el kbir elli bech ndemarri bih l application
     bootstrap: [AppComponent]
 })

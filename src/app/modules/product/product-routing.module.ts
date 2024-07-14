@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {DashboardComponent} from './pages/dashboard/dashboard.component';
 import {AllProductsComponent} from './pages/all-products/all-products.component';
 import {AllCategoriesComponent} from './pages/all-categories/all-categories.component';
+import {ManageProductComponent} from './pages/manage-product/manage-product.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'category/all',
         component: AllCategoriesComponent
+      },
+      {
+        path: 'manage',
+        component: ManageProductComponent
       }
     ]
   }

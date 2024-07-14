@@ -8,11 +8,17 @@ import {Observable} from 'rxjs';
 })
 export class ProductService {
 
+  private readonly baseUrl = 'https://fakestoreapi.com/products';
+
   constructor(
     private http: HttpClient
   ) {}
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>('https://fakestoreapi.com/products');
+    return this.http.get<Product[]>(this.baseUrl);
+  }
+
+  saveProduct(product: Product): Observable<Product> {
+    return this.http.post<Product>(this.baseUrl, product);
   }
 }

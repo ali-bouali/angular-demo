@@ -1,0 +1,32 @@
+<h2>Manage your product</h2>
+
+<div class="new-product-container">
+  <form>
+    <div class="form-group">
+      <label for="image">Image URL</label>
+      <input [(ngModel)]="product.image" id="image" name="image" type="text" />
+    </div>
+
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input [(ngModel)]="product.title" id="title" name="title" type="text" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea [(ngModel)]="product.description" id="description" name="description"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input [(ngModel)]="product.price" id="price" name="price" type="number" />
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category</label>
+      <input [(ngModel)]="product.category" id="category" name="category" type="text" />
+    </div>
+
+    <button (click)="save()">Create Product</button>
+  </form>
+</div>
