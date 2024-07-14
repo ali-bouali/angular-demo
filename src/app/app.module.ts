@@ -16,21 +16,27 @@ import { MainComponent } from './demo/main/main.component';
 import { SubMenuComponent } from './demo/sub-menu/sub-menu.component';
 import { SubComp1Component } from './demo/sub-menu/sub-comp1/sub-comp1.component';
 import { SubComp2Component } from './demo/sub-menu/sub-comp2/sub-comp2.component';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 @NgModule({
-  declarations: [ // ndeclari les composants mte3i hna
-    AppComponent, MyFirstComponent, CalcComponent, LoginComponent, RegisterComponent, DashboardComponent, MenuComponent, MyFormComponent, MainComponent, SubMenuComponent, SubComp1Component, SubComp2Component
-  ],
-  imports: [ // na3mel import l ayy module nest7a99ou
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  // lazemni n7ott les services elli mahomech privded in root
-  providers: [
-    CalculatorService
-  ],
-  // l composant el kbir elli bech ndemarri bih l application
-  bootstrap: [AppComponent]
+    declarations: [ // ndeclari les composants mte3i hna
+        AppComponent, MyFirstComponent, CalcComponent, LoginComponent, RegisterComponent, DashboardComponent, MenuComponent, MyFormComponent, MainComponent, SubMenuComponent, SubComp1Component, SubComp2Component
+    ],
+    imports: [ // na3mel import l ayy module nest7a99ou
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule
+    ],
+    // lazemni n7ott les services elli mahomech privded in root
+    providers: [
+        CalculatorService,
+        HttpClient
+    ],
+    exports: [
+        MenuComponent
+    ],
+    // l composant el kbir elli bech ndemarri bih l application
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

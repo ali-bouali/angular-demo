@@ -8,6 +8,11 @@
   <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
 </div>
+<hr />
+<div class="d-flex gap-2 justify-content-end">
+  <button class="btn btn-primary" (click)="loginToMain()">Login to main</button>
+  <button class="btn btn-success" (click)="loginToProducts()">Login to products</button>
+</div>
 <p>
   Don't have an account?
   <a routerLink="/register">Register</a>
